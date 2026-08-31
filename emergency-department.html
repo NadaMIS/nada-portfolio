@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Emergency Department Analytics — Nada Aljaafari</title>
+<style>
+:root{--cream:#f4efe3;--ink:#171717;--yellow:#f2d54a;--burg:#7a2130;--blue:#b9d7df;--white:#fffaf0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:var(--cream);font-family:Arial,Helvetica,sans-serif}
+a{color:inherit;text-decoration:none}.wrap{max-width:1240px;margin:auto;padding:0 34px}
+nav{height:82px;border-bottom:1px solid #777;display:flex;align-items:center;justify-content:space-between;font-size:12px;text-transform:uppercase;letter-spacing:1.5px}
+.hero{min-height:86vh;padding:70px 0 50px;display:flex;flex-direction:column;justify-content:space-between}
+.pulse{font-size:12px;text-transform:uppercase;letter-spacing:2px}.pulse:before{content:"●";color:var(--yellow);margin-right:10px}
+h1{font-family:Georgia,serif;font-weight:400;font-size:clamp(60px,10vw,145px);line-height:.82;letter-spacing:-6px;margin:20px 0}
+h1 em{color:var(--blue)}.dek{font-size:19px;line-height:1.5;max-width:760px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid #777;margin-top:45px}.stat{padding:25px;border-right:1px solid #777}.stat:last-child{border:0}.stat b{display:block;font-size:48px;letter-spacing:-3px}.stat small{font-size:10px;text-transform:uppercase;letter-spacing:1.4px}
+section{padding:100px 0;border-top:1px solid #555}.label{font-size:11px;text-transform:uppercase;letter-spacing:2px;color:var(--yellow)}
+h2{font-family:Georgia,serif;font-size:clamp(48px,6vw,84px);font-weight:400;letter-spacing:-4px;line-height:.96;margin:12px 0 36px}
+p{line-height:1.65}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:70px}
+.monitor{background:#0e0e0e;border:1px solid #777;padding:25px;min-height:390px;position:relative}
+.axis{position:absolute;left:40px;right:30px;bottom:50px;height:240px;border-left:1px solid #777;border-bottom:1px solid #777}
+.wave{position:absolute;left:5%;right:3%;bottom:15%;height:70%;border-top:5px solid var(--yellow);border-radius:50% 40% 45% 30%;transform:rotate(-5deg)}
+.hours{position:absolute;bottom:-28px;left:0;right:0;display:flex;justify-content:space-between;font-size:9px;color:#aaa}
+.peak{position:absolute;right:12%;top:25%;background:var(--yellow);color:var(--ink);padding:10px 13px;font-weight:700}
+.pipeline{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.card{border:1px solid #777;padding:30px;min-height:245px}.card:nth-child(2){background:var(--blue);color:var(--ink)}.card:nth-child(3){background:var(--burg)}.card b{font-family:Georgia,serif;font-size:31px;display:block;margin:14px 0}
+.cluster{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.c{padding:28px;border:1px solid #777}.c strong{font-size:45px;display:block}.c:nth-child(1){background:var(--cream);color:var(--ink)}.c:nth-child(2){background:var(--yellow);color:var(--ink)}.c:nth-child(3){background:var(--blue);color:var(--ink)}
+.result{background:var(--cream);color:var(--ink);padding:50px}.result .big{font-size:clamp(75px,12vw,165px);font-weight:900;letter-spacing:-8px;line-height:.8}
+.rf{background:var(--burg);padding:50px}.rf .big{font-size:clamp(70px,10vw,135px);font-weight:900;letter-spacing:-7px}
+.takeaway{font-family:Georgia,serif;font-size:clamp(34px,4.5vw,62px);line-height:1.06;color:var(--yellow)}
+.next{background:var(--blue);color:var(--ink);padding:80px 0}.next a{font-family:Georgia,serif;font-size:clamp(45px,7vw,90px)}
+@media(max-width:800px){.grid2,.pipeline,.cluster{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:0}h1{letter-spacing:-3px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a href="index.html">← Nada / Analytics</a><span>Case Study 02 / Healthcare Operations</span></nav>
+<header class="hero">
+<div><div class="pulse">Emergency Department / Operational Analytics</div><h1>When does the ER <em>feel the pressure?</em></h1><p class="dek">A multi-model analysis of emergency-department demand—combining patient-flow patterns, forecasting, severity classification and operational clustering to support smarter staffing and resource planning.</p></div>
+<div class="stats"><div class="stat"><b>90,036</b><small>complete patient records</small></div><div class="stat"><b>33.3</b><small>avg wait · minutes</small></div><div class="stat"><b>10–4</b><small>peak arrival window</small></div><div class="stat"><b>3</b><small>operational clusters</small></div></div>
+</header>
+</div>
+
+<main class="wrap">
+<section class="grid2"><div><div class="label">01 / Operational question</div><h2>Predict demand before demand becomes a queue.</h2></div><div><p>The project analyzed 2022 emergency-department data from the Royal Commission Hospital in Jubail. The operational problems were practical: fluctuating patient volumes, waiting times, and the difficulty of anticipating severity.</p><p>The goal was to understand visit patterns, forecast patient volume, classify severity and identify groups of visits with distinct waiting-time and length-of-stay behavior.</p></div></section>
+
+<section class="grid2"><div class="monitor"><div class="label">Hourly arrivals / conceptual view</div><div class="axis"><div class="wave"></div><div class="peak">PEAK · 10AM–4PM</div><div class="hours"><span>3AM</span><span>6AM</span><span>10AM</span><span>4PM</span><span>12AM</span></div></div></div>
+<div><div class="label">02 / The rhythm of the department</div><h2>The day has a pulse.</h2><p>Arrivals were lowest around 3–6 AM, rose through the morning, and peaked between roughly 10 AM and 4 PM. That pattern translates directly into a staffing and capacity-planning signal.</p><p>Across the cleaned dataset, average waiting time was about 33.3 minutes. Daily arrivals also fluctuated materially across the year.</p></div></section>
+
+<section><div class="label">03 / One dataset, three analytical jobs</div><h2>Forecast. Classify. Segment.</h2><div class="pipeline">
+<div class="card"><span>TIME SERIES</span><b>SARIMA + Prophet</b>Forecast daily patient demand and validate against the final 30 days using MAE, RMSE and MAPE.</div>
+<div class="card"><span>CLASSIFICATION</span><b>Decision Tree + Random Forest</b>Predict severity using diagnosis, waiting time and other prepared features while accounting for severe class imbalance.</div>
+<div class="card"><span>CLUSTERING</span><b>Gaussian Mixture Model</b>Group visits by waiting time, length of stay and severity to reveal distinct operational profiles.</div>
+</div></section>
+
+<section class="grid2"><div class="result"><div class="label" style="color:#171717">Forecast validation</div><div class="big">21.31%</div><p><b>SARIMA MAPE</b></p><p>On the reported validation set, SARIMA achieved MAE 51.63, RMSE 58.23 and MAPE 21.31%, outperforming Prophet in this project.</p></div>
+<div><div class="label">04 / Forecasting result</div><h2>SARIMA won this round.</h2><p>The value of the forecast was operational rather than decorative: expected demand can inform scheduling, staffing and resource allocation before high-volume periods arrive.</p></div></section>
+
+<section><div class="label">05 / Severity classification</div><h2>Accuracy wasn’t the whole story.</h2><div class="grid2"><div class="rf"><div class="big">75%</div><p>Decision Tree overall accuracy</p></div><div><p>The Decision Tree reached about 75% overall accuracy, while the balanced Random Forest + SMOTE model was around 73%. But the dataset was highly imbalanced, so overall accuracy alone could hide weak performance on rare severity levels.</p><p>The Random Forest improved minority-class recall and F1 in the report, making the evaluation a useful lesson in choosing metrics that match the operational risk—not simply choosing the largest accuracy number.</p></div></div></section>
+
+<section><div class="label">06 / Patient-flow clusters</div><h2>Three different kinds of pressure.</h2><div class="cluster">
+<div class="c"><span>CLUSTER 0</span><strong>35.41</strong><small>min wait</small><p>LOS 54.76 · dominated by Severity 4/5.</p></div>
+<div class="c"><span>CLUSTER 1</span><strong>33.06</strong><small>min wait</small><p>LOS 102 · dominated by Severity 2/3.</p></div>
+<div class="c"><span>CLUSTER 2</span><strong>26.59</strong><small>min wait</small><p>LOS 137.7 · associated with higher-priority cases despite the shortest wait.</p></div>
+</div></section>
+
+<section class="grid2"><div><div class="label">07 / Decision signal</div><h2>What the hospital can act on.</h2></div><div class="takeaway">Staff around the arrival curve. Treat severity prediction as a risk problem. Use patient-flow segments to plan beds and clinical capacity—not just front-desk queues.</div></section>
+
+<section><div class="label">08 / Data preparation</div><h2>96,537 → 90,036.</h2><p>After handling missing values, the project retained 90,036 complete records. Arrival and discharge timestamps were engineered into usable time features; gender and severity were encoded; and waiting time and length of stay were winsorized at the 1st and 99th percentiles to reduce the influence of extreme observations.</p></section>
+</main>
+
+<div class="next"><div class="wrap"><div class="label" style="color:#171717">Back to selected work</div><a href="index.html#work">Explore all projects →</a></div></div>
+</body></html>

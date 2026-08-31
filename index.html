@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nada Aljaafari — Analytics Portfolio</title>
+<meta name="description" content="Nada Aljaafari — Business Analytics, Data Science and Decision Support portfolio.">
+<style>
+:root{--cream:#f4efe3;--ink:#171717;--yellow:#f2d54a;--burg:#7a2130;--blue:#b9d7df;--white:#fffaf0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}
+.wrap{max-width:1240px;margin:auto;padding:0 34px}nav{height:78px;border-bottom:1px solid;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;background:rgba(244,239,227,.94);backdrop-filter:blur(12px);z-index:20}
+.logo{font-weight:900;letter-spacing:-1px}.navlinks{display:flex;gap:25px;font-size:11px;text-transform:uppercase;letter-spacing:1.5px}
+.hero{padding:75px 0 65px;min-height:78vh;display:flex;flex-direction:column;justify-content:center}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:2px}
+h1{font-family:Georgia,serif;font-weight:400;font-size:clamp(75px,13vw,180px);line-height:.76;letter-spacing:-9px;margin:28px 0}.accent{color:var(--burg)}
+.intro{display:grid;grid-template-columns:1.5fr 1fr;gap:60px;align-items:end}.intro p{font-family:Georgia,serif;font-size:clamp(23px,3vw,38px);line-height:1.12;margin:0}.mini{font-size:12px;line-height:1.6}
+.ticker{background:var(--yellow);border-top:1px solid;border-bottom:1px solid;padding:16px;overflow:hidden;white-space:nowrap;font-weight:800}
+section{padding:100px 0;border-bottom:1px solid}.sectiontop{display:flex;justify-content:space-between;align-items:end;margin-bottom:45px}.label{font-size:11px;text-transform:uppercase;letter-spacing:2px}
+h2{font-family:Georgia,serif;font-weight:400;font-size:clamp(48px,7vw,92px);letter-spacing:-5px;line-height:.92;margin:10px 0}
+.projects{display:grid;gap:18px}.project{border:1px solid;padding:34px;min-height:330px;display:grid;grid-template-columns:1.25fr .75fr;position:relative;transition:.2s}.project:hover{transform:translateY(-5px);box-shadow:9px 9px 0 var(--ink)}
+.project:nth-child(1){background:var(--white)}.project:nth-child(2){background:var(--ink);color:white}.project:nth-child(3){background:var(--yellow)}.project:nth-child(4){background:var(--blue)}
+.num{font-size:11px;letter-spacing:2px}.project h3{font-family:Georgia,serif;font-size:clamp(38px,5vw,67px);font-weight:400;line-height:.95;margin:35px 0 18px}.project p{max-width:650px;line-height:1.55}.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:25px}.tag{border:1px solid;padding:7px 10px;font-size:10px;text-transform:uppercase;letter-spacing:1px}
+.metric{align-self:center;justify-self:center;text-align:center}.metric b{font-size:clamp(60px,8vw,110px);letter-spacing:-7px;display:block}.metric small{text-transform:uppercase;letter-spacing:1.3px}.arrow{position:absolute;right:25px;top:20px;font-size:30px}
+.aboutgrid{display:grid;grid-template-columns:1fr 1fr;gap:80px}.statement{font-family:Georgia,serif;font-size:clamp(34px,4.8vw,62px);line-height:1.04}.edu{border-top:1px solid}.row{padding:24px 0;border-bottom:1px solid;display:grid;grid-template-columns:1fr auto;gap:20px}.row b{display:block;margin-bottom:7px}
+.experience{display:grid;grid-template-columns:1fr 1fr;gap:15px}.job{border:1px solid;padding:30px;min-height:260px}.job:first-child{background:var(--blue)}.job:last-child{background:var(--white)}.job h3{font-family:Georgia,serif;font-size:34px;font-weight:400;margin:15px 0}.job p{line-height:1.6}
+.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.skill{border:1px solid;padding:25px;min-height:220px}.skill:nth-child(2){background:var(--yellow)}.skill:nth-child(4){background:var(--burg);color:white}.skill h3{font-family:Georgia,serif;font-size:28px;font-weight:400}.skill p{line-height:1.8;font-size:13px}
+.certline{font-family:Georgia,serif;font-size:clamp(25px,3vw,38px);line-height:1.45}
+.contact{background:var(--ink);color:white;padding:100px 0}.contact h2{color:var(--yellow)}.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:35px}.btn{border:1px solid white;padding:14px 18px;font-weight:800}.btn:hover{background:white;color:var(--ink)}
+footer{background:var(--ink);color:#aaa;padding:30px 0;border-top:1px solid #555;font-size:11px;text-transform:uppercase;letter-spacing:1.5px}
+@media(max-width:800px){.navlinks{display:none}.intro,.project,.aboutgrid,.experience,.skills{grid-template-columns:1fr}.metric{justify-self:start;text-align:left}.project{min-height:430px}h1{letter-spacing:-5px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a class="logo" href="#">NADA ALJAAFARI</a><div class="navlinks"><a href="#work">Work</a><a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div></nav>
+<header class="hero">
+<div class="eyebrow">Business Analytics · Data Science · Decision Support</div>
+<h1>NADA<br><span class="accent">ALJAAFARI.</span></h1>
+<div class="intro"><p>I turn complex data into decisions people can actually use.</p><div class="mini">M.S. Business Analytics · First Honors<br>B.S. Management Information Systems<br>Python · SQL · R · Power BI · Tableau</div></div>
+</header>
+</div>
+<div class="ticker">ANALYZE THE PROBLEM ✦ BUILD THE MODEL ✦ QUESTION THE RESULT ✦ COMMUNICATE THE INSIGHT ✦ SUPPORT THE DECISION ✦</div>
+
+<main>
+<section id="work"><div class="wrap"><div class="sectiontop"><div><div class="label">Selected Work / Big Four</div><h2>Four problems.<br>Four decisions.</h2></div><div class="label">Case studies →</div></div>
+<div class="projects">
+<a class="project" href="medical-tourism.html"><span class="arrow">↗</span><div><div class="num">01 / HEALTHCARE STRATEGY</div><h3>Saudi Arabia Medical Tourism</h3><p>Evaluating the Kingdom's potential as a medical-tourism hub through patient comparisons, cost analysis, machine learning and demand forecasting.</p><div class="tags"><span class="tag">Python</span><span class="tag">Forecasting</span><span class="tag">ML</span><span class="tag">Strategy</span></div></div><div class="metric"><b>79K</b><small>patient records</small></div></a>
+<a class="project" href="emergency-department.html"><span class="arrow">↗</span><div><div class="num">02 / HEALTHCARE OPERATIONS</div><h3>Emergency Department Analytics</h3><p>Forecasting demand, classifying severity and segmenting patient flow to turn ER data into staffing and capacity signals.</p><div class="tags"><span class="tag">SARIMA</span><span class="tag">Random Forest</span><span class="tag">GMM</span><span class="tag">Python</span></div></div><div class="metric"><b>90K</b><small>complete records</small></div></a>
+<a class="project" href="mostakan.html"><span class="arrow">↗</span><div><div class="num">03 / BUSINESS OPTIMIZATION</div><h3>Mostakan Tea Room</h3><p>Turning a real café's declining demand into a constrained marketing-budget allocation problem using linear programming.</p><div class="tags"><span class="tag">Optimization</span><span class="tag">Linear Programming</span><span class="tag">Business Analytics</span></div></div><div class="metric"><b>5</b><small>marketing channels</small></div></a>
+<a class="project" href="spam-detector.html"><span class="arrow">↗</span><div><div class="num">04 / NLP + PRODUCT</div><h3>Spam Detection Application</h3><p>Cleaning text, engineering TF-IDF features, comparing classifiers and taking the selected model into a user-facing web application.</p><div class="tags"><span class="tag">NLP</span><span class="tag">TF-IDF</span><span class="tag">Naive Bayes</span><span class="tag">Flask</span></div></div><div class="metric"><b>APP</b><small>model → interface</small></div></a>
+</div></div></section>
+
+<section id="about"><div class="wrap aboutgrid"><div><div class="label">About</div><h2>Technical depth.<br>Business context.</h2></div><div><p class="statement">My background sits between analytics, information systems and product thinking—so I care about what happens <i>after</i> the model.</p><p>I work across predictive modeling, data visualization, systems analysis, testing and digital-product development, with an emphasis on translating technical outputs into clear stakeholder decisions.</p>
+<div class="edu"><div class="row"><div><b>M.S. Business Analytics · First Honors</b>King Fahd University of Petroleum & Minerals</div><span>2024–2026</span></div><div class="row"><div><b>B.S. Management Information Systems</b>King Faisal University</div><span>2016–2021</span></div></div></div></div></section>
+
+<section id="experience"><div class="wrap"><div class="label">Experience</div><h2>Before the models,<br>I learned the systems.</h2><div class="experience">
+<div class="job"><div class="label">2024</div><h3>Executive Secretary · Al-Kifah Academy</h3><p>Maintained executive reports and process documentation, coordinated daily operations and tracked operational requirements to support clearer communication and process improvement.</p></div>
+<div class="job"><div class="label">2021</div><h3>Business Analyst Intern · Saudi Irrigation Organization</h3><p>Evaluated internal systems, performed structured and usability testing, validated requirements, documented quality issues and presented redesign recommendations across technical and business stakeholders.</p></div>
+</div></div></section>
+
+<section id="skills"><div class="wrap"><div class="label">Capabilities</div><h2>Not a keyword wall.</h2><div class="skills">
+<div class="skill"><h3>Programming</h3><p>Python<br>SQL<br>R<br>HTML / CSS<br>PHP<br>Flask</p></div>
+<div class="skill"><h3>Analytics</h3><p>Predictive Modeling<br>Machine Learning<br>scikit-learn<br>Power BI<br>Tableau<br>Excel</p></div>
+<div class="skill"><h3>Systems + QA</h3><p>Systems Analysis<br>Requirements Gathering<br>Software Testing<br>Quality Assurance<br>Technical Documentation</p></div>
+<div class="skill"><h3>UX + Delivery</h3><p>UX/UI Design<br>Wireframing<br>User Testing<br>System Prototyping<br>Project Management</p></div>
+</div>
+<p class="certline"><b>Also:</b> Google UX Design Certificate (2024) · UX Design, Misk Skills (2021) · PMP Training (2021) · Commercial Marketing Management (2021)</p>
+</div></section>
+</main>
+
+<section class="contact" id="contact"><div class="wrap"><div class="label">Let’s work together</div><h2>Have a problem<br>worth analyzing?</h2><p>Open to analytics, business intelligence and data-driven problem-solving opportunities.</p><div class="buttons"><a class="btn" href="mailto:nadaljaafari@gmail.com">EMAIL ME ↗</a><a class="btn" href="https://www.linkedin.com/in/nadaaljaafari" target="_blank">LINKEDIN ↗</a><a class="btn" href="https://github.com/NadaMIS" target="_blank">GITHUB ↗</a></div></div></section>
+<footer><div class="wrap">Nada Aljaafari · Analytics Portfolio</div></footer>
+</body></html>

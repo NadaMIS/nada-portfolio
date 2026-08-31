@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Spam Detector — Nada Aljaafari</title>
+<style>
+:root{--cream:#f4efe3;--ink:#171717;--yellow:#f2d54a;--burg:#7a2130;--blue:#b9d7df;--white:#fffaf0;--green:#c7e6c3}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--blue);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+a{color:inherit;text-decoration:none}.wrap{max-width:1240px;margin:auto;padding:0 34px}
+nav{height:82px;border-bottom:1px solid;display:flex;align-items:center;justify-content:space-between;font-size:12px;text-transform:uppercase;letter-spacing:1.5px}
+.hero{padding:72px 0 65px}.label{font-size:11px;text-transform:uppercase;letter-spacing:2px}
+h1{font-family:Georgia,serif;font-size:clamp(65px,10vw,145px);font-weight:400;line-height:.82;letter-spacing:-6px;margin:22px 0}
+h1 em{color:var(--burg)}.dek{font-family:Georgia,serif;font-size:clamp(22px,3vw,37px);line-height:1.15;max-width:900px}
+.demo{margin-top:55px;background:var(--white);border:1px solid;padding:26px;box-shadow:12px 12px 0 var(--burg)}
+.windowbar{display:flex;gap:7px;border-bottom:1px solid;padding-bottom:18px}.dot{width:10px;height:10px;border:1px solid;border-radius:50%}
+.demo textarea{width:100%;min-height:130px;margin:22px 0;padding:20px;border:1px solid;background:transparent;font:inherit;resize:none}
+.demo button{border:1px solid;background:var(--yellow);padding:14px 20px;font-weight:800;cursor:pointer}
+.demo button:hover{transform:translateY(-2px)}#result{display:inline-block;margin-left:15px;font-weight:900}
+.band{background:var(--ink);color:white;padding:18px 0;text-align:center;font-weight:800;letter-spacing:1px}
+section{padding:100px 0;border-bottom:1px solid}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:75px}
+h2{font-family:Georgia,serif;font-size:clamp(48px,6.7vw,88px);font-weight:400;line-height:.95;letter-spacing:-4px;margin:12px 0 36px}p{line-height:1.65}
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.step{border:1px solid;padding:25px;min-height:190px;background:var(--cream)}.step:nth-child(3){background:var(--yellow)}.step:nth-child(5){background:var(--burg);color:white}.step b{font-family:Georgia,serif;font-size:28px;display:block;margin:16px 0}
+.balance{background:var(--cream);border:1px solid;padding:45px}.bars{margin-top:35px}.bar{height:45px;border:1px solid;margin:12px 0;display:flex;align-items:center;padding:0 12px;font-weight:800}.valid{width:100%;background:var(--yellow)}.spam{width:18%;background:var(--burg);color:white}
+.models{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.model{border:1px solid;padding:35px;min-height:310px;background:var(--cream)}.model.winner{background:var(--yellow);transform:rotate(-1deg);box-shadow:9px 9px 0 var(--ink)}.model .score{font-size:58px;font-weight:950;letter-spacing:-4px}.model b{font-family:Georgia,serif;font-size:30px;display:block;margin:18px 0}
+.matrix{display:grid;grid-template-columns:1fr 1fr;max-width:430px}.cell{aspect-ratio:1.4;border:1px solid;display:grid;place-items:center;font-size:38px;font-weight:900}.cell:nth-child(1),.cell:nth-child(4){background:var(--yellow)}.cell:nth-child(2),.cell:nth-child(3){background:var(--white)}
+.product{background:var(--ink);color:white;padding:55px}.product h2{color:var(--yellow)}.product .big{font-family:Georgia,serif;font-size:clamp(42px,6vw,78px);line-height:1}
+.takeaway{font-family:Georgia,serif;font-size:clamp(35px,5vw,66px);line-height:1.04;color:var(--burg)}
+.final{background:var(--yellow);padding:90px 0}.final h2{margin-bottom:20px}.final a{display:inline-block;border:1px solid;padding:14px 20px;margin-top:20px;font-weight:800}
+@media(max-width:800px){.grid2,.flow,.models{grid-template-columns:1fr}h1{letter-spacing:-3px}.spam{width:35%}#result{display:block;margin:15px 0 0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a href="index.html">← Nada / Analytics</a><span>Case Study 04 / NLP + Product</span></nav>
+<header class="hero">
+<div class="label">Machine Learning · NLP · Web Interface</div>
+<h1>Is this message <em>spam?</em></h1>
+<p class="dek">I turned raw text into a working classification experience—cleaning messages, transforming language with TF-IDF, comparing three models, and surfacing the result through a simple web interface.</p>
+<div class="demo">
+<div class="windowbar"><i class="dot"></i><i class="dot"></i><i class="dot"></i></div>
+<div class="label" style="margin-top:18px">Try the portfolio demo</div>
+<textarea id="msg" placeholder="Type a message…">Congratulations! You won a FREE prize. Click now to claim.</textarea>
+<button onclick="demo()">CHECK MESSAGE →</button><span id="result">WAITING…</span>
+</div>
+</header>
+</div>
+<div class="band">RAW MESSAGE → CLEAN TEXT → TF-IDF → MODEL → SPAM / VALID</div>
+
+<main class="wrap">
+<section class="grid2"><div><div class="label">01 / The product question</div><h2>Can a model protect the inbox without getting in the way?</h2></div><div><p>The project built a machine-learning classification system to distinguish spam from valid messages, then connected that model to a web interface where a user could enter text and receive an instant classification.</p><p>That last step matters: the work moved beyond notebook experimentation into a usable interaction.</p></div></section>
+
+<section><div class="label">02 / NLP pipeline</div><h2>Text had to become signal.</h2><div class="flow">
+<div class="step"><span>01</span><b>Clean</b>Lowercase text and remove special characters.</div>
+<div class="step"><span>02</span><b>Strip noise</b>Remove stopwords, hyperlinks, numbers and extra whitespace.</div>
+<div class="step"><span>03</span><b>Vectorize</b>Transform cleaned text into TF-IDF features.</div>
+<div class="step"><span>04</span><b>Balance</b>Use SMOTE with sampling_strategy = 0.5.</div>
+<div class="step"><span>05</span><b>Classify</b>Compare Naive Bayes, Decision Tree and KNN.</div>
+</div></section>
+
+<section class="grid2"><div class="balance"><div class="label">Class imbalance / approximate counts</div><div class="bars"><div class="bar valid">≈ 4,900 VALID</div><div class="bar spam">≈700</div></div></div>
+<div><div class="label">03 / The data challenge</div><h2>Spam was the minority.</h2><p>The dataset contained roughly 4,900 valid messages versus about 700 spam messages. That imbalance matters because a classifier can look deceptively strong by favoring the majority class.</p><p>TF-IDF represented message content numerically, while SMOTE was used to increase minority-class representation during training.</p></div></section>
+
+<section><div class="label">04 / Model comparison</div><h2>Three models entered. One balanced best.</h2><div class="models">
+<div class="model winner"><div class="score">NB</div><b>Multinomial Naive Bayes</b><p>131 spam correctly detected · 19 spam missed · 10 valid messages falsely flagged.</p><small>BEST PRECISION / RECALL BALANCE IN THE REPORT</small></div>
+<div class="model"><div class="score">DT</div><b>Decision Tree</b><p>124 spam correctly detected · 26 spam missed · 32 valid messages falsely flagged.</p></div>
+<div class="model"><div class="score">KNN</div><b>K-Nearest Neighbors</b><p>96 spam correctly detected · 54 spam missed · only 2 valid messages falsely flagged.</p></div>
+</div></section>
+
+<section class="grid2"><div><div class="label">05 / Read the errors</div><h2>A false positive has a human cost.</h2><p>For the selected Naive Bayes model, the confusion-matrix counts show a useful trade-off: it caught 131 spam messages while only falsely labeling 10 valid messages as spam.</p><p>That makes model evaluation more concrete than a single accuracy score: missing spam is annoying, but incorrectly hiding a legitimate message can also be costly.</p></div>
+<div><div class="matrix"><div class="cell">131</div><div class="cell">19</div><div class="cell">10</div><div class="cell">✓</div></div><p class="label">Simplified error-story visualization</p></div></section>
+
+<section class="product"><div class="label">06 / From model to product</div><h2>The most important output wasn’t a chart.</h2><div class="big">It was a screen where someone could type a message and get an answer.</div><p>The project included a web interface demonstrating real message input and immediate spam/valid prediction—closing the gap between model development and user experience.</p></section>
+
+<section class="grid2"><div><div class="label">07 / Portfolio signal</div><h2>Ship the analysis.</h2></div><div class="takeaway">Clean data. Engineer text features. Compare models. Understand errors. Then make the result usable.</div></section>
+</main>
+
+<div class="final"><div class="wrap"><div class="label">The Big Four / Complete</div><h2>Four projects.<br>Four different decisions.</h2><p>Healthcare strategy · Emergency operations · Business optimization · NLP product.</p><a href="index.html#work">← BACK TO SELECTED WORK</a></div></div>
+
+<script>
+function demo(){
+ const t=document.getElementById('msg').value.toLowerCase();
+ const spamWords=['free','win','won','prize','claim','click','urgent','offer','cash','winner'];
+ let hits=spamWords.filter(w=>t.includes(w)).length;
+ const r=document.getElementById('result');
+ if(hits>=2){r.textContent='LIKELY SPAM ✕';r.style.color='#7a2130'}
+ else{r.textContent='LIKELY VALID ✓';r.style.color='#24733a'}
+}
+</script>
+</body></html>

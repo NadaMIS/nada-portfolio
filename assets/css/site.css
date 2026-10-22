@@ -425,3 +425,12 @@ body{transition:background-color .35s,color .35s}
 
 /* Arabic pages: IBM Plex Sans Arabic leads so Arabic and the numbers inside it share one typeface. */
 html[lang="ar"]{--font:"IBM Plex Sans Arabic","Google Sans",system-ui,sans-serif}
+
+/* Case study: screenshot gallery */
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,2.4vw,28px)}
+@media (max-width: 760px){ .gallery{grid-template-columns:1fr} }
+.gshot{margin:0;background:var(--surface);border-radius:var(--r-lg);padding:clamp(10px,1.4vw,14px)}
+.gshot img{display:block;width:100%;height:auto;border-radius:var(--r-sm);border:1px solid var(--outline)}
+.gshot figcaption{font-size:var(--fs-small);color:var(--muted);margin:12px 6px 4px}
+.fig img.shot{border:1px solid var(--outline)}
+.more-row + .more-row{margin-top:12px}

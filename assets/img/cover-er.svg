@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Emergency department dashboard illustration: arrivals over a day with a midday peak, and a triage severity scale">
+<style>@media (prefers-reduced-motion: no-preference){.draw{stroke-dasharray:640;stroke-dashoffset:640;animation:draw 1.8s cubic-bezier(.3,.6,.2,1) .3s forwards}@keyframes draw{to{stroke-dashoffset:0}}.fade{opacity:0;animation:fade 1s ease 1.2s forwards}@keyframes fade{to{opacity:.22}}.pulse{transform-box:fill-box;transform-origin:center;animation:pulse 2.2s ease-out 2s infinite;opacity:0}@keyframes pulse{0%{transform:scale(1);opacity:.55}100%{transform:scale(3.2);opacity:0}}}</style>
+<rect width="800" height="500" fill="#003049"/>
+<circle cx="700" cy="70" r="180" fill="#0B4466" opacity=".6"/>
+<!-- demand card -->
+<g transform="translate(56 70)">
+<rect width="470" height="330" rx="22" fill="#FFFFFF"/>
+<rect x="28" y="28" width="120" height="12" rx="6" fill="#003049"/>
+<rect x="28" y="50" width="200" height="8" rx="4" fill="#A9C3D3"/>
+<rect x="198" y="96" width="126" height="190" rx="8" fill="#669BBC" opacity=".18"/>
+<g stroke="#E7F0F6" stroke-width="1.5"><line x1="28" y1="136" x2="442" y2="136"/><line x1="28" y1="196" x2="442" y2="196"/><line x1="28" y1="256" x2="442" y2="256"/></g>
+<path d="M28 262 L60 258 L92 250 L124 236 L156 206 L188 170 L220 132 L252 112 L284 118 L316 140 L348 182 L380 214 L412 236 L442 246 L442 286 L28 286 Z" fill="#669BBC" opacity=".22" class="fade"/>
+<path d="M28 262 L60 258 L92 250 L124 236 L156 206 L188 170 L220 132 L252 112 L284 118 L316 140 L348 182 L380 214 L412 236 L442 246" fill="none" stroke="#003049" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" pathLength="640" class="draw"/>
+<circle cx="252" cy="112" r="8" fill="#C1121F" class="pulse"/>
+<circle cx="252" cy="112" r="8" fill="#C1121F" stroke="#FFFFFF" stroke-width="3"/>
+<line x1="28" y1="286" x2="442" y2="286" stroke="#A9C3D3" stroke-width="2"/>
+</g>
+<!-- triage scale -->
+<g transform="translate(566 92)" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700" text-anchor="middle">
+<rect width="178" height="52" rx="26" fill="#C1121F"/><text x="89" y="33" fill="#FFFFFF">S1</text>
+<rect y="64" width="178" height="52" rx="26" fill="#FFFFFF"/><text x="89" y="97" fill="#003049">S2</text>
+<rect y="128" width="178" height="52" rx="26" fill="#DDEBF3"/><text x="89" y="161" fill="#003049">S3</text>
+<rect y="192" width="178" height="52" rx="26" fill="#A9C3D3"/><text x="89" y="225" fill="#003049">S4</text>
+<rect y="256" width="178" height="52" rx="26" fill="#669BBC"/><text x="89" y="289" fill="#003049">S5</text>
+</g>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Tea cup beside a donut chart of a marketing budget split across five social channels">
+<style>@media (prefers-reduced-motion: no-preference){.steam path{animation:steam 2.8s ease-in-out infinite;opacity:.9}.steam path:nth-child(2){animation-delay:.5s}.steam path:nth-child(3){animation-delay:1s}@keyframes steam{0%{transform:translateY(8px);opacity:0}40%{opacity:.95}100%{transform:translateY(-14px);opacity:0}}}</style>
+<rect width="800" height="500" fill="#DDEBF3"/>
+<circle cx="720" cy="80" r="150" fill="#E7F0F6"/>
+<!-- donut: 47 / 35 / 6 / 6 / 6 -->
+<g transform="translate(270 250) rotate(-90)" fill="none" stroke-width="58">
+<circle r="130" stroke="#003049" pathLength="100" stroke-dasharray="46.5 53.5"/>
+<circle r="130" stroke="#2F6A8E" pathLength="100" stroke-dasharray="34.5 65.5" stroke-dashoffset="-47"/>
+<circle r="130" stroke="#669BBC" pathLength="100" stroke-dasharray="5.5 94.5" stroke-dashoffset="-82"/>
+<circle r="130" stroke="#A9C3D3" pathLength="100" stroke-dasharray="5.5 94.5" stroke-dashoffset="-88"/>
+<circle r="130" stroke="#FFFFFF" pathLength="100" stroke-dasharray="5.5 94.5" stroke-dashoffset="-94"/>
+</g>
+<circle cx="270" cy="250" r="72" fill="#DDEBF3"/>
+<!-- tea cup -->
+<g transform="translate(500 170)">
+<ellipse cx="110" cy="210" rx="150" ry="22" fill="#FFFFFF"/>
+<path d="M20 60 H200 C200 150 170 200 110 200 C50 200 20 150 20 60 Z" fill="#003049"/>
+<path d="M200 90 C250 90 252 150 196 152" fill="none" stroke="#003049" stroke-width="16" stroke-linecap="round"/>
+<rect x="20" y="52" width="180" height="16" rx="8" fill="#0B4466"/>
+<g class="steam" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round"><path d="M72 32 C60 10 86 0 74 -24"/><path d="M112 32 C100 10 126 0 114 -24"/><path d="M152 32 C140 10 166 0 154 -24"/></g>
+</g>
+</svg>

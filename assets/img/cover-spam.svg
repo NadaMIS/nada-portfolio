@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Phone showing a message inbox where one message is flagged as spam">
+<style>@media (prefers-reduced-motion: no-preference){.flag{animation:flag 1.8s ease-in-out infinite}@keyframes flag{0%,100%{stroke-opacity:1}50%{stroke-opacity:.25}}.float{animation:float 3.2s ease-in-out infinite alternate}@keyframes float{from{transform:translate(590px,150px)}to{transform:translate(590px,136px)}}}</style>
+<rect width="800" height="500" fill="#003049"/>
+<circle cx="120" cy="420" r="190" fill="#0B4466" opacity=".6"/>
+<g transform="translate(270 40)">
+<rect width="260" height="500" rx="38" fill="#0B4466"/>
+<rect x="12" y="12" width="236" height="476" rx="28" fill="#FFFFFF"/>
+<rect x="95" y="26" width="70" height="10" rx="5" fill="#DDEBF3"/>
+<!-- messages -->
+<g>
+<rect x="30" y="64" width="200" height="62" rx="16" fill="#E7F0F6"/><rect x="46" y="82" width="120" height="9" rx="4.5" fill="#003049" opacity=".75"/><rect x="46" y="100" width="90" height="8" rx="4" fill="#669BBC"/>
+<circle cx="206" cy="95" r="12" fill="#669BBC"/><path d="M200 95 l4 4 8-8" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g>
+<rect x="30" y="140" width="200" height="78" rx="16" fill="#FFFFFF" stroke="#C1121F" stroke-width="3" class="flag"/>
+<rect x="46" y="156" width="64" height="24" rx="12" fill="#C1121F"/><text x="78" y="173" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">SPAM</text>
+<rect x="46" y="190" width="150" height="8" rx="4" fill="#003049" opacity=".55"/>
+</g>
+<g>
+<rect x="30" y="232" width="200" height="62" rx="16" fill="#E7F0F6"/><rect x="46" y="250" width="110" height="9" rx="4.5" fill="#003049" opacity=".75"/><rect x="46" y="268" width="130" height="8" rx="4" fill="#669BBC"/>
+<circle cx="206" cy="263" r="12" fill="#669BBC"/><path d="M200 263 l4 4 8-8" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g>
+<rect x="30" y="308" width="200" height="62" rx="16" fill="#E7F0F6"/><rect x="46" y="326" width="90" height="9" rx="4.5" fill="#003049" opacity=".75"/><rect x="46" y="344" width="120" height="8" rx="4" fill="#669BBC"/>
+<circle cx="206" cy="339" r="12" fill="#669BBC"/><path d="M200 339 l4 4 8-8" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<!-- shield -->
+<g class="float" transform="translate(590 150)"><path d="M60 0 L120 22 V70 C120 112 94 140 60 156 C26 140 0 112 0 70 V22 Z" fill="#669BBC"/><path d="M36 78 l18 18 34-36" fill="none" stroke="#003049" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/></g>
+</svg>

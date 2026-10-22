@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Placeholder: spam detector web app">
+<rect width="800" height="600" fill="#E7F0F6"/>
+<g font-family="Helvetica, Arial, sans-serif">
+<rect x="24" y="24" width="138" height="30" rx="15" fill="#003049"/><text x="93" y="44" text-anchor="middle" font-size="13" font-weight="700" fill="#F3F7FA" letter-spacing="1">PLACEHOLDER</text>
+<g transform="translate(110 84)"><rect width="580" height="430" rx="12" fill="#FFFFFF" stroke="#003049" stroke-width="2"/>
+<rect width="580" height="36" rx="12" fill="#003049"/><rect y="24" width="580" height="12" fill="#003049"/>
+<g fill="#F3F7FA"><circle cx="20" cy="18" r="5"/><circle cx="38" cy="18" r="5"/><circle cx="56" cy="18" r="5"/></g>
+<rect x="40" y="66" width="220" height="16" rx="8" fill="#003049"/><rect x="40" y="92" width="320" height="8" rx="4" fill="#669BBC"/>
+<rect x="40" y="124" width="500" height="130" rx="10" fill="#F3F7FA" stroke="#669BBC" stroke-width="2"/>
+<g fill="#003049" opacity=".45"><rect x="60" y="146" width="380" height="8" rx="4"/><rect x="60" y="164" width="420" height="8" rx="4"/><rect x="60" y="182" width="300" height="8" rx="4"/></g>
+<rect x="40" y="274" width="150" height="42" rx="21" fill="#003049"/><rect x="72" y="291" width="86" height="8" rx="4" fill="#F3F7FA"/>
+<rect x="40" y="342" width="500" height="58" rx="10" fill="#F3F7FA" stroke="#C1121F" stroke-width="2"/>
+<rect x="58" y="358" width="70" height="26" rx="13" fill="#C1121F"/><rect x="72" y="368" width="42" height="6" rx="3" fill="#F3F7FA"/>
+<rect x="146" y="362" width="200" height="8" rx="4" fill="#003049" opacity=".7"/><rect x="146" y="378" width="140" height="8" rx="4" fill="#003049" opacity=".4"/></g>
+<text x="776" y="578" text-anchor="end" font-size="15" fill="#51697A">Replace with Flask app screenshots</text>
+</g></svg>

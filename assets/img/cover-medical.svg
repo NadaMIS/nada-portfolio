@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Two nearly identical patient distributions overlapping, illustrating consistent care for Saudi and non-Saudi patients">
+<style>@media (prefers-reduced-motion: no-preference){.sway{animation:sway 3.6s ease-in-out infinite alternate}@keyframes sway{from{transform:translateX(-10px)}to{transform:translateX(8px)}}}</style>
+<rect width="800" height="500" fill="#E7F0F6"/>
+<circle cx="110" cy="440" r="170" fill="#DDEBF3"/>
+<g transform="translate(90 70)">
+<rect width="620" height="340" rx="24" fill="#FFFFFF"/>
+<g transform="translate(40 30)"><circle cx="8" cy="8" r="8" fill="#003049"/><rect x="24" y="3" width="90" height="10" rx="5" fill="#A9C3D3"/><circle cx="148" cy="8" r="8" fill="#669BBC"/><rect x="164" y="3" width="90" height="10" rx="5" fill="#A9C3D3"/></g>
+<line x1="40" y1="290" x2="580" y2="290" stroke="#A9C3D3" stroke-width="2"/>
+<path d="M40 290 C150 290 200 110 300 100 C400 90 450 290 580 290 Z" fill="#003049" opacity=".85"/>
+<path d="M40 290 C160 290 215 120 312 108 C410 98 460 290 580 290 Z" fill="#669BBC" opacity=".75" class="sway"/>
+<line x1="306" y1="80" x2="306" y2="290" stroke="#FFFFFF" stroke-width="2" stroke-dasharray="6 6"/>
+</g>
+<g transform="translate(640 66)"><circle r="48" cx="0" cy="0" fill="#003049"/><path d="M-20 -8 C-12 -16 -4 -16 4 -8 C12 0 20 0 26 -8 M-20 10 C-12 2 -4 2 4 10 C12 18 20 18 26 10" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" transform="translate(-3 0)"/></g>
+</svg>
